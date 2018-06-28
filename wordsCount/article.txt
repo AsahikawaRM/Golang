@@ -1,0 +1,9 @@
+The difficulty with the list representation arises from the need to scan
+to find the end of the list. The reason we need to scan is that, although
+the standard way of representing a list as a chain of pairs readily
+provides us with a pointer to the beginning of the list, it gives us no
+easily accessible pointer to the end. The modification that avoids the
+drawback is to represent the queue as a list, together with an additional
+pointer that indicates the final pair in the list. That way, when we go to
+insert an item, we can consult the rear pointer and so avoid scanning the
+list.
